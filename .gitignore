@@ -1,0 +1,9 @@
+# General
+.DS_Store
+
+# JetBrains
+.idea/
+!.idea/watcherTasks.xml
+
+# Visual Studio Code
+.vscode/

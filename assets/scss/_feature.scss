@@ -1,0 +1,166 @@
+/* ====== feature css ====== */
+
+.feature-section {
+  &.pt-120 {
+    @media #{$xs} {
+      padding-top: 80px;
+    }
+  }
+  .single-feature {
+    text-align: center;
+    padding: 30px 10px;
+
+    @media #{$desktop} {
+      padding: 30px 40px;
+    }
+
+    .icon {
+      @extend %flex-center;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: rgba($theme-color, 0.1);
+      color: $theme-color;
+      margin: auto;
+      margin-bottom: 30px;
+      font-size: 65px;
+      line-height: 1;
+    }
+
+    .content {
+      h3 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+.box-style {
+  border-radius: 39px;
+  background: $white;
+  @include box-shadow(0px 0px 59px rgba(214, 214, 214, 0.35));
+  padding: 50px 30px 30px;
+  border-bottom: 5px solid;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @media #{$desktop} {
+    padding: 50px 40px 30px;
+  }
+  @media #{$lg} {
+    padding: 50px 20px 30px;
+  }
+
+  .icon {
+    width: 85px;
+    height: 85px;
+    margin: auto;
+    margin-bottom: 30px;
+    @extend %flex-center;
+    font-size: 70px;
+  }
+
+  .content {
+    h3 {
+      margin-bottom: 25px;
+
+      @media #{$lg} {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    a {
+      color: $body-color;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    ul {
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    a.main-btn {
+      padding: 10px 30px;
+      font-size: 18px;
+      font-weight: 400;
+      color: $white;
+
+      &.border-btn {
+        color: $body-color;
+
+        &:hover {
+          color: $theme-color;
+
+          &::after {
+            background: rgba($theme-color, 0.2);
+          }
+        }
+      }
+    }
+  }
+
+  &.color-1 {
+    border-color: #ff92a5;
+
+    .icon {
+      color: #ff92a5;
+    }
+    .content {
+      a {
+        &:hover {
+          color: #ff92a5;
+        }
+      }
+    }
+  }
+
+  &.color-2 {
+    border-color: $theme-color;
+
+    .icon {
+      color: $theme-color;
+    }
+
+    .content {
+      a {
+        &:hover {
+          color: $theme-color;
+        }
+      }
+      .main-btn {
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &.color-3 {
+    border-color: #b89cfe;
+
+    .icon {
+      color: #b89cfe;
+    }
+
+    .content {
+      a {
+        &:hover {
+          color: #b89cfe;
+        }
+      }
+    }
+  }
+}

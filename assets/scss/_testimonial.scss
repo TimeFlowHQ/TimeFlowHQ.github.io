@@ -1,0 +1,181 @@
+/* ======== testimonial css ======= */
+
+.testimonial-section {
+  padding: 100px 0;
+
+  .wie-zijn-wij-button {
+    margin-top: 3rem;
+  }
+
+  .testimonial-2-row {
+    @media #{$xs,$sm,$md} {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .testimonial-active-wrapper {
+    position: relative;
+
+    .shapes {
+      .shape {
+        position: absolute;
+        z-index: -1;
+
+        @media #{$md, $xs} {
+          display: none;
+        }
+
+        &.shape-1 {
+          left: -100px;
+          top: 50%;
+          @include transform(translateY(-50%));
+
+          @media #{$lg} {
+            width: 44%;
+          }
+        }
+
+        &.shape-2 {
+          left: 150px;
+          bottom: -110px;
+
+          @media #{$lg} {
+            width: 25%;
+            bottom: -50px;
+          }
+        }
+
+        &.shape-right-1 {
+          top: 50%;
+          @include transform(translateY(-50%));
+          right: -10px;
+        }
+
+        &.shape-right-2 {
+          right: 150px;
+          bottom: 110px;
+
+          @media #{$lg} {
+            width: 35%;
+            height: 30%;
+            right: 100px;
+            top: 500px;
+          }
+        }
+      }
+    }
+
+    .tns-controls {
+      position: absolute;
+      right: 175px;
+      bottom: 0px;
+      z-index: 9;
+      display: flex;
+      align-items: center;
+
+      @media #{$lg} {
+        right: 0;
+      }
+      @media #{$xs} {
+        right: 0;
+        left: 0;
+        bottom: -75px;
+        justify-content: center;
+      }
+      @media #{$sm} {
+        right: 0;
+        left: auto;
+        bottom: 0px;
+      }
+
+      button {
+        border: 2px solid #c7cad3;
+        color: #c7cad3;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        @extend %flex-center;
+        margin: 0 8px;
+        @include transition(0.3s);
+        background: transparent;
+
+        i {
+          font-weight: 700;
+        }
+
+        &:hover {
+          color: $theme-color;
+          border-color: $theme-color;
+          @include box-shadow(0px 6px 16px rgba(88, 100, 255, 0.25));
+        }
+      }
+    }
+
+    .testimonial-active {
+      .single-testimonial {
+        .discover-more-button {
+          @media #{$xs, $sm, $md} {
+            width: 100%;
+          }
+        }
+
+        .content-wrapper {
+          .content {
+            p {
+              font-size: 18px;
+              line-height: 30px;
+              margin-bottom: 30px;
+            }
+          }
+
+          .info {
+            h4 {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+
+      .shape-container {
+        position: relative;
+
+        .shape {
+          @media #{$md, $xs} {
+            display: none;
+          }
+        }
+
+        .testimonial-img {
+
+          @media #{$xs, $sm, $md} {
+            text-align: center;
+            margin-bottom: 50px;
+          }
+
+          img {
+            bottom: 42%;
+            width: 50%;
+            position: absolute;
+
+            @media #{$md, $xs} {
+              top: 0;
+              width: 40%;
+              position: relative;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.text-highlight {
+  color: $theme-color;
+}
+
+.shape-right-2 {
+  @media #{$lg} {
+    right: 25% !important;
+  }
+}

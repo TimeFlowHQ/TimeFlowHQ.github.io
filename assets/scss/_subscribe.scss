@@ -1,0 +1,78 @@
+/* ======= subscribe css ======= */
+
+.subscribe-section {
+  .section-title {
+    h2 {
+      @media #{$xs} {
+        font-size: 24px;
+      }
+      @media #{$sm} {
+        font-size: 32px;
+      }
+    }
+  }
+  .subscribe-wrapper {
+    background-image: url("../img/subscribe/subscribe-bg.svg");
+    padding: 65px 50px 50px;
+    border-radius: 30px;
+
+    @media #{$xs} {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @media #{$sm} {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .subscribe-form {
+      position: relative;
+      margin-bottom: 15px;
+
+      input {
+        width: 100%;
+        padding: 20px 30px;
+        padding-right: 142px;
+        border-radius: 18px;
+        background: $white;
+        color: $body-color;
+        border: 1px solid transparent;
+        @include transition(0.3s);
+
+        &:focus {
+          @include box-shadow(0px 0px 15px rgba($white, 0.35));
+        }
+
+        &::placeholder {
+          opacity: 0.7;
+          color: $body-color;
+        }
+      }
+
+      button {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        padding: 17.5px 25px;
+        font-weight: 700;
+        font-size: 18px;
+        border-radius: 18px;
+
+        @media #{$xs} {
+          position: static;
+          margin-top: 20px;
+          background: $white;
+          color: $theme-color;
+          padding: 17.5px 35px;
+        }
+        @media #{$sm} {
+          position: absolute;
+          margin-top: 0px;
+          color: $white;
+          background: $theme-color;
+          padding: 17.5px 25px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+/* ====== hero-area ===== */
+
+.hero-section {
+  position: relative;
+  z-index: 1;
+  background-image: url("../img/hero/hero-bg.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  @media #{$desktop} {
+    padding: 160px 0 10rem;
+  }
+
+  @media #{$laptop} {
+    padding: 240px 0 130px;
+  }
+
+  @media #{$xs, $lg, $md} {
+    padding-top: 130px;
+  }
+
+  .hero-content {
+    margin-bottom: 100px;
+    @media #{$lg} {
+      margin-left: 130px;
+    }
+
+    @media #{$md, $xs} {
+      margin-bottom: 0;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-bottom: 35px;
+      color: $white;
+
+      @media #{$laptop} {
+        font-size: 52px;
+      }
+      @media #{$lg} {
+        font-size: 42px;
+      }
+      @media #{$xs} {
+        font-size: 32px;
+      }
+      @media #{$sm} {
+        font-size: 42px;
+      }
+    }
+
+    p {
+      margin-bottom: 40px;
+      font-size: 18px;
+      line-height: 28px;
+      color: $white;
+
+      @media #{$desktop} {
+        padding-right: 120px;
+      }
+      @media #{$laptop} {
+        padding-right: 70px;
+      }
+    }
+
+    .main-btn {
+      border-color: $white;
+      color: $white;
+
+      &::after {
+        background: rgba($white, 0.15);
+      }
+    }
+
+    .scroll-bottom {
+      position: absolute;
+      @extend %flex-center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $white;
+      border: 3px solid $theme-color;
+      color: $theme-color;
+      left: 15px;
+      bottom: 0;
+      z-index: 9;
+
+      i {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .hero-img {
+    &-row {
+      display: flex;
+      justify-content: center;
+    }
+
+    width: 100%;
+    display: flex;
+
+    @media #{$lg, $md, $xs} {
+      justify-content: center;
+    }
+
+    @media #{$md, $xs} {
+      padding-top: 30px;
+      padding-bottom: 50px;
+    }
+
+    img {
+      @media screen and (min-width: 1500px) {
+        width: 800px !important;
+      }
+
+      @media #{$desktop} {
+        width: 100%;
+      }
+
+      @media #{$laptop} {
+        width: 100%;
+      }
+
+      @media #{$lg} {
+        width: 100%;
+      }
+
+      @media #{$md} {
+        width: 100%;
+      }
+
+      @media #{$xs,$sm} {
+        width: 100%;
+      }
+    }
+  }
+
+  .hero-shape {
+    .shape {
+      position: absolute;
+      z-index: -1;
+
+      &.shape-1 {
+        top: -285px;
+        right: -300px;
+
+        @media #{$laptop} {
+          top: -420px;
+          right: -550px;
+        }
+        @media #{$lg} {
+          top: -400px;
+          right: -550px;
+        }
+
+        @media #{$md} {
+          display: none;
+        }
+        @media #{$xs} {
+          display: none;
+        }
+      }
+    }
+  }
+}

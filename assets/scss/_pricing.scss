@@ -1,0 +1,106 @@
+/* ====== pricing css ====== */
+
+.pricing-section {
+  position: relative;
+  z-index: 1;
+
+  &.pt-120 {
+    @media #{$xs} {
+      padding-top: 80px;
+    }
+  }
+  &.pb-120 {
+    @media #{$xs} {
+      padding-bottom: 80px;
+    }
+  }
+
+  .pricing-nav-wrapper {
+    ul {
+      justify-content: center;
+      align-items: center;
+
+      li {
+        a {
+          font-size: 18px;
+          font-weight: 700;
+          color: $body-color;
+          padding: 10px 30px;
+          background: rgba($theme-color, 0.1);
+          margin: 5px;
+          border-radius: 30px;
+
+          &.active {
+            color: $white;
+            background: $theme-color;
+          }
+        }
+      }
+    }
+  }
+
+  .single-pricing {
+    border-radius: 40px;
+    background: $white;
+    @include box-shadow(0px 0px 59px rgba(191, 191, 191, 0.16));
+    padding: 45px 30px;
+    margin-bottom: 30px;
+
+    .pricing-header {
+      padding-bottom: 35px;
+      border-bottom: 1px solid $border-color;
+      margin-bottom: 45px;
+      text-align: center;
+
+      .price {
+        font-size: 45px;
+        margin-bottom: 30px;
+        color: $theme-color;
+      }
+    }
+
+    .content {
+      margin-bottom: 30px;
+
+      @media #{$desktop} {
+        padding-left: 50px;
+      }
+
+      ul {
+        li {
+          font-size: 18px;
+          margin-bottom: 15px;
+          display: flex;
+          align-items: center;
+
+          i {
+            margin-right: 15px;
+            color: rgba($heading-color, 0.3);
+            font-weight: 700;
+
+            &.active {
+              color: $theme-color;
+            }
+          }
+        }
+      }
+    }
+
+    .pricing-btn {
+      text-align: center;
+
+      .main-btn {
+        padding: 12px 45px;
+        font-weight: 400;
+
+        &.border-btn {
+          color: $body-color;
+
+          &::after {
+            background: rgba($theme-color, 0.1);
+          }
+        }
+      }
+    }
+  }
+}
